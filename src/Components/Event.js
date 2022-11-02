@@ -8,7 +8,7 @@ const Event = ({ name, url, place, dates, image }) => {
         <p className="date">{date}</p>
         <img src={image} alt="event's poster" className="eventImg"></img>
         <h3 className="attractionName">{name}</h3>
-        <a href={url} target="_blank" className="moreInfo">
+        <a href={url} className="moreInfo">
           More info
         </a>
       </div>
