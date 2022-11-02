@@ -1,0 +1,52 @@
+@use './variables' as *;
+
+@media (max-width: 900px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .searchSection {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .eventsContainer {
+        width: 100%;
+    }
+
+    .appFooter {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 580px) {
+    nav {
+        flex-direction: column;
+    }
+    .menuList {
+        margin-left: 0;
+        padding-left: 0;
+        .navLinks {
+            padding-left: 0;
+            a {
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    .topMain {
+        height: 15vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .searchSection {
+        height: 80px;
+    }
+
+    .upcomingEvents {
+        height: 0vh;
+        padding-top: 10px;
+    }
+
+
+}

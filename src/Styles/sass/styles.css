@@ -1,10 +1,12 @@
 .appHeader {
+  max-width: 1440px;
   min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
+  margin: 0 auto;
 }
 
 nav {
@@ -77,6 +79,7 @@ nav {
   font-size: 1rem;
   height: 50px;
   width: 300px;
+  color: rgb(8, 8, 43);
   border: 1px solid gray;
   border-radius: 2px;
   outline: none;
@@ -87,12 +90,22 @@ nav {
   display: flex;
   align-items: flex-end;
   font-size: 1rem;
+  color: rgb(8, 8, 43);
   height: 45px;
   width: 300px;
   margin-bottom: 0;
   border: 1px solid gray;
   border-radius: 2px;
   cursor: pointer;
+}
+.searchSection::-moz-placeholder {
+  color: rgb(8, 8, 43);
+}
+.searchSection:-ms-input-placeholder {
+  color: rgb(8, 8, 43);
+}
+.searchSection::placeholder {
+  color: rgb(8, 8, 43);
 }
 
 .mainContainer {
@@ -111,6 +124,7 @@ nav {
   gap: 1rem;
   padding: 2.5rem 0.5rem;
   margin-top: 5rem;
+  transition: all 1s ease-in-out;
 }
 
 .eventCard {
@@ -252,4 +266,47 @@ a {
   max-width: 1440px;
   width: 80%;
   margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    width: 95%;
+  }
+  .searchSection {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .eventsContainer {
+    width: 100%;
+  }
+  .appFooter {
+    text-align: center;
+  }
+}
+@media (max-width: 580px) {
+  nav {
+    flex-direction: column;
+  }
+  .menuList {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .menuList .navLinks {
+    padding-left: 0;
+  }
+  .menuList .navLinks a {
+    padding: 0.5rem;
+  }
+  .topMain {
+    height: 15vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .searchSection {
+    height: 80px;
+  }
+  .upcomingEvents {
+    height: 0vh;
+    padding-top: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */
