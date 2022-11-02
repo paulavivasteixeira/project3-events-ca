@@ -1,0 +1,41 @@
+@use "./_variables.scss" as *;
+
+.appHeader {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  // border-bottom: 2px solid rgba(60, 56, 83, 0.193);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-top: 1rem;
+}
+
+
+.navLinks{
+    a{
+      font-size:  1.2rem;
+      padding: 1rem;
+      transition: 0.3s ;
+      &:hover,
+      &:focus {
+        color: $yellow;
+        cursor: pointer;
+      }
+    }
+}
+
+.fadeIn {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  10% { opacity: 0; }
+  100% { opacity: 1; }
+}

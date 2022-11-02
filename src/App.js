@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import "./App.scss";
+import "./Styles/sass/styles.scss";
 // Sections Components
 import Header from "./Components/Header";
 import DisplayEvents from "./Components/DisplayEvents";

@@ -1,0 +1,58 @@
+@use "variables" as *;
+
+//  FONT-FAMILY
+
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../../../Fonts/Bebas_Neue/BebasNeue-Regular.ttf');
+    font-weight: normal; 
+}
+
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../../../Fonts/PT_Sans/PTSans-Regular.ttf');
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../../Fonts/Source_Sans_Pro/SourceSansPro-Light.ttf');
+    font-weight: normal; 
+}
+
+
+html {
+    font-size: 125%;
+}
+
+h1{
+    font-family: 'Bebas Neue';
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    color: $yellow;
+    text-transform: uppercase;
+    letter-spacing: 0.2cm;
+    margin: 0.5rem;
+}
+
+
+h2 {
+    font-family: 'PT Sans';
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    color: $white;
+}
+
+p,
+a{
+    font-family: 'Source Sans Pro';
+    font-size: 1rem;
+    transition: 0.3s ;
+}
+a {
+&:hover,
+&:focus {
+  color: $yellow;
+  cursor: pointer;
+}
+}
