@@ -1,0 +1,25 @@
+@use "./variables.scss" as *;
+
+body {
+  background-color: $darkColor;
+  color: whitesmoke;
+}
+
+html {
+  font-size: 125%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+}

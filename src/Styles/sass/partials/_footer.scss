@@ -1,0 +1,14 @@
+@use "./_variables.scss" as *;
+
+.appFooter {
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid hsla(43, 74%, 49%, 0.644);
+}
+
+a {
+  font-weight: bold;
+}
