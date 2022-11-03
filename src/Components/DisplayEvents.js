@@ -2,25 +2,35 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Event from "./Event";
 
-function DisplayEvents({ sort, search }) {
+function DisplayEvents({ city, search }) {
   const [events, setEvents] = useState([]);
 
   // API CALL - first render
   useEffect(() => {
-    console.log(sort);
+    let selectorParams = {};
+    if (city === 'date,asc') {
+      selectorParams = {
+        keyword: search,
+        sort: 'date,asc',
+      }
+    } else {
+      console.log('code is here', city);
+        selectorParams = {
+          keyword: search,
+          sort: 'date,asc',
+          city: city
+        }
+      }
+  
     axios({
       url: `https://app.ticketmaster.com/discovery/v2/events?apikey=ssi7z7zAxXhwJbRzJY0OsBa6P0feF23r&locale=*&startDateTime=2022-10-30T15:38:00Z&endDateTime=2023-10-31T15:38:00Z&countryCode=CA`,
       method: "GET",
       dataResponse: "json",
-      params: {
-        keyword: search,
-        city: sort,
-      },
+      params: selectorParams
     }).then((res) => {
       setEvents(res?.data?._embedded?.events);
-      console.log(res?.data?._embedded?.events);
     });
-  }, [sort, search]);
+  }, [city, search]);
 
   return (
     <section className="mainContainer wrapper">

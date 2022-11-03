@@ -1,6 +1,6 @@
 .appHeader {
   max-width: 1440px;
-  min-height: 15vh;
+  min-height: 12vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,6 +63,10 @@ nav {
   width: 100%;
 }
 
+.searchContainer {
+  width: 300px;
+}
+
 .searchSection {
   height: 70px;
   display: flex;
@@ -92,19 +96,19 @@ nav {
   font-size: 1rem;
   color: rgb(8, 8, 43);
   height: 45px;
-  width: 300px;
+  width: 294px;
   margin-bottom: 0;
   border: 1px solid gray;
   border-radius: 2px;
   cursor: pointer;
 }
-.searchSection::-moz-placeholder {
+.searchSection input::-moz-placeholder {
   color: rgb(8, 8, 43);
 }
-.searchSection:-ms-input-placeholder {
+.searchSection input:-ms-input-placeholder {
   color: rgb(8, 8, 43);
 }
-.searchSection::placeholder {
+.searchSection input::placeholder {
   color: rgb(8, 8, 43);
 }
 

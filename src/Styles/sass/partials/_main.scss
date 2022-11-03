@@ -14,6 +14,9 @@
   margin-top: 1rem;
   width: 100%;
 }
+.searchContainer {
+  width: 300px;
+}
 
 .searchSection {
   height: 70px;
@@ -44,14 +47,14 @@
     font-size: 1rem;
     color: $darkColor;
     height: 45px;
-    width: 300px;
+    width: 294px;
     margin-bottom: 0;
     border: 1px solid gray;
     border-radius: 2px;
     cursor: pointer;
-  }
-  &::placeholder {
-  color: $darkColor;
+    &::placeholder {
+      color: $darkColor;
+    }
   }
 }
 

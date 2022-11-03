@@ -7,11 +7,11 @@ import Footer from "./Components/Footer";
 import UserForm from "./Components/UserForm";
 
 function App() {
-  const [sort, setSort] = useState("date,asc");
-  const [search, setSearch] = useState("");
+  const [city, setCity] = useState('');
+  const [search, setSearch] = useState('');
 
   const getOptions = (userOption) => {
-    setSort(userOption);
+    setCity(userOption);
   };
 
   return (
@@ -23,7 +23,7 @@ function App() {
       <main className="appMain wrapper">
         <section className="topMain">
           <div className="searchSection">
-            <UserForm getOptions={getOptions} />
+            <UserForm getOptions={getOptions} searchFunction={setSearch} />
 
             <div className="searchContainer">  
               <input
@@ -33,11 +33,10 @@ function App() {
                 placeholder="Enter an attraction's name"
                 onChange={(e) => setSearch(e.target.value)}
               />
-              <div className="searchIcon"></div>
             </div>
           </div>
         </section>
-        <DisplayEvents sort={sort} search={search} />
+        <DisplayEvents city={city} search={search} />
       </main>
 
       {/* FOOTER SECTION */}
