@@ -83,17 +83,21 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.073);
-  box-shadow: 2px 2px 2px 2px rgba(226, 150, 8, 0.079);
+  background-color: rgba(210, 197, 247, 0.106);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 70px;
+  border-top-right-radius: 70px;
+  border-top-left-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(84, 83, 83, 0.333);
   transition: 0.2s;
   &:hover,
   &:focus {
     transform: scale(1.05);
   }
   .city{
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-size: clamp(1.1rem, 1.0333rem + 0.2963vw, 1.3rem);
     line-height: 1.5rem;
-    padding: 0.5rem;
+    padding: 10px;
     margin: 0;
   }
   .date {
@@ -101,12 +105,13 @@
     justify-content: flex-end;
     align-items: start;
     font-weight: bold;
-    padding: 0.5rem;
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    padding: 10px;
+    font-size: clamp(1.1rem, 1.0333rem + 0.2963vw, 1.3rem);
     line-height: 1.4rem;
     margin: 0;
     color: $white;
     background-color: $popColor;
+    border-top-right-radius: 10px;
   }
   .eventImg{
     width:100%;
@@ -119,15 +124,19 @@
     background-color: $popColor;
     display: flex;
     align-items: center;
+    text-transform: capitalize;
     min-height: 100px;
     margin-top: 0;
+    padding: 0 10px;
     font-size: 1rem;
+    border-bottom-left-radius: 10px;
   }
   .moreInfo{
-    font-size:  clamp(1rem, 1.5vw, 1.1rem);
+    font-size: 1rem;
+    line-height: 1.2rem;
     display: flex;
-    text-decoration: underline;
-    padding: 0 0.5rem 0.2rem;
+    justify-content: flex-end;
+    padding: 0 10px 10px;
     &:hover,
     &:focus {
       color: $popColor;

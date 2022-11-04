@@ -29,30 +29,43 @@ html {
 
 h1{
     font-family: 'Bebas Neue';
-    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    font-size: clamp(1.6rem, 0.9667rem + 2.8148vw, 3.5rem);
     color: $yellow;
     text-transform: uppercase;
     letter-spacing: 0.2cm;
     margin: 0.5rem;
+    position: relative;
+    &::after {
+        content: '';
+        width: 105%;
+        height: 200%;
+        position: absolute;
+        bottom: 35px;
+        left: -80px;
+        background-color: hsla(39, 90%, 45%, 0.467);
+        transform: perspective(0.5em) rotateX(35deg) scale(1, 0.35);
+        filter: blur(1.5em);
+        border-bottom-left-radius: 150px
+    }
 }
 
 
 h2 {
     font-family: 'PT Sans';
-    font-size: clamp(1.6rem, 3vw, 2rem);
-    color: $white;
+    font-size: clamp(1.6rem, 1.4667rem + 0.5926vw, 2rem);
+    color: $popColor;
+    text-shadow: 2px 2px 2px rgba(248, 228, 197, 0.252);
 }
 
 p,
 a{
     font-family: 'Source Sans Pro';
     font-size: 1rem;
-    transition: 0.3s ;
 }
 a {
 &:hover,
 &:focus {
-  color: $yellow;
+  color: $popColor;
   cursor: pointer;
 }
 }

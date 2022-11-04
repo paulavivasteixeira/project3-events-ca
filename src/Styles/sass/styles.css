@@ -1,5 +1,5 @@
 .appHeader {
-  max-width: 1440px;
+  max-width: 1800px;
   min-height: 12vh;
   display: flex;
   flex-direction: column;
@@ -138,17 +138,21 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.073);
-  box-shadow: 2px 2px 2px 2px rgba(226, 150, 8, 0.079);
+  background-color: rgba(210, 197, 247, 0.106);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 70px;
+  border-top-right-radius: 70px;
+  border-top-left-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(84, 83, 83, 0.333);
   transition: 0.2s;
 }
 .eventCard:hover, .eventCard:focus {
   transform: scale(1.05);
 }
 .eventCard .city {
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1.1rem, 1.0333rem + 0.2963vw, 1.3rem);
   line-height: 1.5rem;
-  padding: 0.5rem;
+  padding: 10px;
   margin: 0;
 }
 .eventCard .date {
@@ -156,12 +160,13 @@ nav {
   justify-content: flex-end;
   align-items: start;
   font-weight: bold;
-  padding: 0.5rem;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  padding: 10px;
+  font-size: clamp(1.1rem, 1.0333rem + 0.2963vw, 1.3rem);
   line-height: 1.4rem;
   margin: 0;
   color: white;
   background-color: hsla(39deg, 90%, 45%, 0.914);
+  border-top-right-radius: 10px;
 }
 .eventCard .eventImg {
   width: 100%;
@@ -175,15 +180,19 @@ nav {
   background-color: hsla(39deg, 90%, 45%, 0.914);
   display: flex;
   align-items: center;
+  text-transform: capitalize;
   min-height: 100px;
   margin-top: 0;
+  padding: 0 10px;
   font-size: 1rem;
+  border-bottom-left-radius: 10px;
 }
 .eventCard .moreInfo {
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  font-size: 1rem;
+  line-height: 1.2rem;
   display: flex;
-  text-decoration: underline;
-  padding: 0 0.5rem 0.2rem;
+  justify-content: flex-end;
+  padding: 0 10px 10px;
 }
 .eventCard .moreInfo:hover, .eventCard .moreInfo:focus {
   color: hsla(39deg, 90%, 45%, 0.914);
@@ -223,28 +232,41 @@ html {
 
 h1 {
   font-family: "Bebas Neue";
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-size: clamp(1.6rem, 0.9667rem + 2.8148vw, 3.5rem);
   color: rgb(255, 221, 0);
   text-transform: uppercase;
   letter-spacing: 0.2cm;
   margin: 0.5rem;
+  position: relative;
+}
+h1::after {
+  content: "";
+  width: 105%;
+  height: 200%;
+  position: absolute;
+  bottom: 35px;
+  left: -80px;
+  background-color: hsla(39deg, 90%, 45%, 0.467);
+  transform: perspective(0.5em) rotateX(35deg) scale(1, 0.35);
+  filter: blur(1.5em);
+  border-bottom-left-radius: 150px;
 }
 
 h2 {
   font-family: "PT Sans";
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  color: white;
+  font-size: clamp(1.6rem, 1.4667rem + 0.5926vw, 2rem);
+  color: hsla(39deg, 90%, 45%, 0.914);
+  text-shadow: 2px 2px 2px rgba(248, 228, 197, 0.252);
 }
 
 p,
 a {
   font-family: "Source Sans Pro";
   font-size: 1rem;
-  transition: 0.3s;
 }
 
 a:hover, a:focus {
-  color: rgb(255, 221, 0);
+  color: hsla(39deg, 90%, 45%, 0.914);
   cursor: pointer;
 }
 
