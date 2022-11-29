@@ -17,25 +17,17 @@ function UserForm(props) {
         onChange={handleSortBy}
         value={cityMenu}
       >
-        <label for="ChooseCity"></label>
+        <label className="sr-only">Choose a city</label>
         <option value="placeholder" disable>
         Choose a City:
         </option>
-        <label for="calgary"></label>
         <option value="calgary">Calgary</option>
-        <label for="mississauga"></label>
         <option value="mississauga">Mississauga</option>
-        <label for="montreal"></label>
         <option value="montreal">Montreal</option>
-        <label for="ottawa"></label>
         <option value="ottawa">Ottawa</option>
-        <label for="toronto"></label>
         <option value="toronto">Toronto</option>
-        <label for="quebec"></label>
         <option value="quebec">Quebec</option>
-        <label for="vancouver"></label>
         <option value="vancouver">Vancouver</option>
-        <label for="winnipeg"></label>
         <option value="winnipeg">Winnipeg</option>
       </select>
     </form>
